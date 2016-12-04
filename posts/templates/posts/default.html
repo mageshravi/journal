@@ -1,0 +1,48 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Personal Log</title>
+        <meta name="description" content="Personal log to keep track of daily events, activities and experiences">
+
+        <!-- Bootstrap viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.7/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.7/css/bootstrap-theme.min.css' %}">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="{% static 'lib/font-awesome-4.6.3/css/font-awesome.min.css' %}">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.theme.min.css' %}">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="{% static 'lib/fonts/Sahitya/sahitya.css' %}" >
+        <link rel="stylesheet" href="{% static 'lib/fonts/Open_Sans/open_sans.css' %}" >
+        
+        <!-- Custom CSS below this line -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+
+        <header class="page-header" >
+            
+        </header>
+
+        <section id="view-content" >
+            {% block view_content %}
+
+            {% endblock %}
+        </section>
+
+        <footer class="page-footer" >
+            <div class="container" ></div>
+        </footer>
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="{% static 'lib/jquery-3.1.1.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'lib/bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
+        <!-- Custom JS below this line -->
+    </body>
+</html>

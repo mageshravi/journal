@@ -1,0 +1,13 @@
+body {
+  font-family: 'Sahitya', serif;
+  font-size: 16px;
+  line-height: 1.7em;
+}
+  
+h1, h2, h3, h4, h5, h6,
+strong, th {
+  font-family: 'Sahitya', serif;
+  font-weight: bold;
+}
+
+@import "_post";

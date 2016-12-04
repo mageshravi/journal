@@ -1,0 +1,29 @@
+.post {
+
+  .published-on {
+    font-family: 'Open Sans';
+    font-weight: lighter;
+    text-align: center;
+
+    .date {
+      font-size: 72px;
+      line-height: 76px;
+      display: block;
+    }
+    .month {
+      font-size: 24px;
+      display: block;
+    }
+  }
+
+  .content {
+
+    .published-at {
+      color: lightgray;
+    }
+    .published-at:before {
+      content: '\2014\00A0'; /* &mdash; &nbsp; */
+    }
+  }
+}
+      

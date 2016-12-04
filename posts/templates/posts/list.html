@@ -1,0 +1,32 @@
+{% extends 'posts/default.html' %}
+
+{% block view_content %}
+
+<div class="jumbotron" >
+    <div class="container" >
+        <h1>Personal Log</h1>
+        <p>To keep track of daily events, activities and experiences</p>
+    </div>
+</div>
+
+<div class="container" >
+
+    {% for post in posts %}
+    <article class="post">
+        <div class="published-on col-sm-4 col-lg-2">
+            <time class="date" datetime="{{ post.published_on.isoformat }}">
+                {{ post.published_on|date:"d" }}
+            </time>
+            <span class="month">{{ post.published_on|date:"M" }}</span>
+        </div>
+        <div class="content col-sm-8 col-lg-10">
+            <h2 class="title" >{{ post.title }}</h2>
+            {{ post.content|safe }}
+            <p class="published-at">At {{ post.published_on|date:"H:i a" }}</p>
+        </div>
+    </article>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}
