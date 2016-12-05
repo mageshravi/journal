@@ -2,15 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import View
 
-from .models import (
-    Post
+from .services import (
+    PostService
 )
 
 
 class ListView(View):
 
     def get(self, request):
-        posts = Post.objects.all().filter(is_published=True)
+        post_service = PostService()
+        posts = post_service.get_all_published()
         context = {
             'posts': posts
         }
