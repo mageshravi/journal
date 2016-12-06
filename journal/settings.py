@@ -25,7 +25,10 @@ SECRET_KEY = '708h4$4hmv35u2g#1%h-egm41q_2igaoelpzcfd%w#0p_r)dx4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["alpha.journal.com"]
+ALLOWED_HOSTS = [
+    "localhost",
+    "alpha.journal.com"
+]
 
 
 # Application definition

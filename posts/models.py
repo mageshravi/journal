@@ -7,7 +7,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=128)
     content = HTMLField()
-    url = models.URLField()
+    url = models.CharField(max_length=64)
     is_published = models.BooleanField(default=False)
     published_on = models.DateTimeField(default=datetime.now)
     updated_on = models.DateTimeField(auto_now=True)
