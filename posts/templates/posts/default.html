@@ -8,18 +8,22 @@
         <!-- Bootstrap viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1" >
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.7/css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.7/css/bootstrap-theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/bootstrap/3.3.7/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/bootstrap/3.3.7/css/bootstrap-theme.min.css' %}">
         <!-- FontAwesome -->
-        <link rel="stylesheet" href="{% static 'lib/font-awesome-4.6.3/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/font-awesome/4.6.3/css/font-awesome.min.css' %}">
         <!-- jQuery UI -->
-        <link rel="stylesheet" href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.css' %}">
-        <link rel="stylesheet" href="{% static 'lib/jquery-ui-1.12.1/jquery-ui.theme.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/jquery-ui/1.12.1/jquery-ui.min.css' %}">
+        <link rel="stylesheet" href="{% static 'lib/jquery-ui/1.12.1/jquery-ui.theme.min.css' %}">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{% static 'lib/fonts/Sahitya/sahitya.css' %}" >
         <link rel="stylesheet" href="{% static 'lib/fonts/Open_Sans/open_sans.css' %}" >
-        
+
+        <!-- Code-Prettify -->
+        <link rel="stylesheet" href="{% static 'lib/google-code-prettify/prettify.css' %}"/>
+        <link rel="stylesheet" href="{% static 'lib/google-code-prettify/themes/atelier-estuary-dark.css' %}" />
+
         <!-- Custom CSS below this line -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
@@ -41,8 +45,18 @@
 
         <!-- Scripts -->
         <script type="text/javascript" src="{% static 'lib/jquery-3.1.1.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'lib/jquery-ui-1.12.1/jquery-ui.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'lib/bootstrap-3.3.7/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'lib/jquery-ui/1.12.1/jquery-ui.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'lib/bootstrap/3.3.7/js/bootstrap.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+        <script type="text/javascript" src="{% static 'lib/google-code-prettify/prettify.js' %}"></script>
+
+        <!-- App -->
+        <script type="text/javascript" src="{% static 'js/app.min.js' %}"></script>
+        
         <!-- Custom JS below this line -->
+
+        {% block addl_scripts %}
+
+        {% endblock %}
     </body>
 </html>

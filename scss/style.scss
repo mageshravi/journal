@@ -10,4 +10,9 @@ strong, th {
   font-weight: bold;
 }
 
+/* code-prettify alternate lines */
+.linenums > li:nth-child(even) {
+  background-color: #292920;
+}
+  
 @import "_post";
